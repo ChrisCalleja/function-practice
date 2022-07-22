@@ -1,0 +1,64 @@
+Javascript Functions 6/28
+
+What is a JavaScript function?
+A JavaScript function is a block of code designed to perform a particular task.
+A JavaScript function is executed when "something" invokes it (calls it).
+
+function can encapsulate some type of logic (1 line of code or 1000 lines)
+--example - rather than doing area=L*W, area2=L2*W2, area3=L3*W3, etc, etc... use a function!
+
+
+1. FUNCTION DECLARATION
+function getAreaFD(length, width) {
+  return length * width;
+}
+
+PARTS OF THE FUNCTION
+-function keyword denotes the start of a function declaration.
+-"getAreaFD" is the name we gave the function.
+-(length, width) are the parameters. Parameters denote what the function needs in order to perform its task. Parameters aren’t required. This function, in particular though, needs extra data in order to perform its task.
+-Everything within the curly braces denotes the logic that the function will perform once called.
+-The return statement causes the function to immediately exit and returns the value to the line of code that called the function. No code is executed after a return statement so the RETURN STATEMENT SHOULD ALWAYS BE THE LAST LINE OF CODE within a function.
+
+CALLING THE FUNCTION
+-getAreaFD(3, 4)
+-We refer to 3 and 4 as arguments. 3 is the length and 4 is the width.
+-The function uses those arguments to calculate the area and returns the value.
+-console.log(getAreaFD(3,4))
+
+2. FUNCTION EXPRESSION
+const getAreaFE = function(length, width) {
+  return length * width;
+}
+Parts of the function
+A function expression is very similar to and has almost the same syntax as a function declaration. Function declarations load before any code is executed (hoisted) while function expressions load only when the interpreter reaches that line of code.
+Calling the function
+getAreaFE(5, 6)
+We refer to 5 and 6 as arguments. 3 is the length and 4 is the width.
+The function uses those arguments to calculate the area and returns the value.
+
+
+3. ARROW FUNCTION (preferred)
+const getAreaAF = (length, width) => {
+  return length * width;
+}
+
+PARTS OF THE FUNCTION
+An arrow function is a syntactically compact alternative to a regular function expression. Arrow functions were introduced in ES6.
+
+CALLING THE FUNCTION
+getAreaAF(9, 8)
+We refer to 9 and 8 as arguments. 9 is the length and 8 is the width.
+The function uses those arguments to calculate the area and returns the value.
+
+These two are synonymous:
+const hello = () => {
+  return "hello";
+}
+
+const hello = () => "hello";
+
+
+~~giving value to parameters is AKA "giving arguments"~~
+
+
